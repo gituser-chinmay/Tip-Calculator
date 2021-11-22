@@ -1,1 +1,59 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tip Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="myscript.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>SPLITTER</h2>
+            </div>
+            <div class=calculator-box>
+                <div class="bill-amount">
+                    <p>Bill</p>
+                    <div class="amount-input">
+                        <input type="text">
+                        <img src="../resources/images/icon-dollar.svg" alt="">
+                    </div>
+                </div>
+                <div class="tip-selector">
+                    <p>Select tip %</p>
+                    <div class="tips">
+                        <button class="pad">5%</button>
+                        <button class="pad">10%</button>
+                        <button>15%</button>
+                        <button class="pad">20%</button>
+                        <button class="pad">25%</button>
+                        <button>Custom</button>
+                    </div>
+                </div>
+                <div class="number-people" style="margin-top: 15px;">
+                    <p>Number of people</p>
+                    <div class="amount-input">
+                        <input type="text">
+                        <img src="../resources/images/icon-person.svg" alt="">
+                    </div>
+                </div>
+                <div class="result-box">
+                    <div class="tip-amount">
+                        <span class="result-text">Tip Amount</span><br><span class="grey-text">/ person</span>
+                    </div>
+                    <div class="amount-text">
+                        <p id="amount">0.0</p>
+                    </div>
+                    <div class="tip-amount">
+                        <span class="result-text">Total</span><br><span class="grey-text">/ person</span>
+                    </div>
+                    <div class="amount-text">
+                        <p id="total-amount">0.0</p>
+                    </div>
+                    <div class="reset-button">
+                        <button>RESET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

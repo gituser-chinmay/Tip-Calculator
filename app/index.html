@@ -14,25 +14,25 @@
                 <div class="bill-amount">
                     <p>Bill</p>
                     <div class="amount-input">
-                        <input type="text">
+                        <input type="text" onchange="billInput()" id="bill">
                         <img src="../resources/images/icon-dollar.svg" alt="">
                     </div>
                 </div>
                 <div class="tip-selector">
                     <p>Select tip %</p>
                     <div class="tips">
-                        <button class="pad">5%</button>
-                        <button class="pad">10%</button>
-                        <button>15%</button>
-                        <button class="pad">20%</button>
-                        <button class="pad">25%</button>
-                        <button>Custom</button>
+                        <button id="button1" onclick="calculateTip('button1')" class="pad" value="5">5%</button>
+                        <button id="button2" onclick="calculateTip('button2')" class="pad" value=10>10%</button>
+                        <button id="button3" onclick="calculateTip('button3')" value="15">15%</button>
+                        <button id="button4" onclick="calculateTip('button4')" class="pad" value="30">20%</button>
+                        <button id="button5" onclick="calculateTip('button5')" class="pad" value="25">25%</button>
+                        <button id="button6" onclick="calculateTip('button6')">Custom</button>
                     </div>
                 </div>
                 <div class="number-people" style="margin-top: 15px;">
-                    <p>Number of people</p>
-                    <div class="amount-input">
-                        <input type="text">
+                    <p>Number of people <span id="error">Number cannot be 0</span> </p>
+                    <div id="number-input">
+                        <input type="text" onchange="peopleInput()" id="people">
                         <img src="../resources/images/icon-person.svg" alt="">
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                         <p id="total-amount">0.0</p>
                     </div>
                     <div class="reset-button">
-                        <button>RESET</button>
+                        <button onclick="window.location.reload()">RESET</button>
                     </div>
                 </div>
             </div>

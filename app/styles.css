@@ -58,7 +58,7 @@ p {
     color: hsl(183, 100%, 15%);
 }
 
-.amount-input input {
+.amount-input input, #number-input input {
     background-color: hsl(189, 41%, 97%);
     height: 45px;
     width: 350px;
@@ -76,7 +76,7 @@ p {
     padding: 0px 15px;
 }
 
-.amount-input img {
+.amount-input img, #number-input img {
     position: relative;
     right: 370px;
     top: 0px;
@@ -84,8 +84,9 @@ p {
    transform: scale(1.1);
 }
 
-.amount-input input:focus {
-    outline: none;
+.amount-input input:focus, #number-input input:focus {
+    outline: 1px solid rgb(0, 209, 105);
+    box-shadow: 0px 0px 7px rgb(73, 216, 144);
 }
 
 .tip-selector {
@@ -212,4 +213,18 @@ p {
     color: hsl(183, 100%, 15%);
     transition-duration: 0.3s;
     cursor: pointer;
+}
+
+#error {
+    opacity: 0;
+
+    position: relative;
+    left: 50px;
+    font-size: 13px;
+    color: rgb(255, 70, 70);
+}
+
+#people-count input:focus{
+    outline: 1px solid rgb(255, 70, 70);
+    box-shadow: 0px 0px 8px rgb(255, 98, 98);
 }

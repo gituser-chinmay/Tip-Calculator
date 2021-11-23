@@ -1,4 +1,5 @@
 let billAmt, peopleNumber, tipAmt, tipPerPerson, totalPerPerson, totalAmt;
+const buttons = ['button1','button2','button3','button4','button5','button6'];
 
 function billInput() {
     billAmt = document.getElementById('bill').value;
@@ -21,10 +22,24 @@ function peopleInput() {
 
 function calculateTip(obj) {
     var elememt = document.getElementById(obj);
+
     elememt.style.backgroundColor = "hsl(176, 59%, 49%)";
     elememt.style.color = "hsl(183, 100%, 15%)";
-    
+
     tipAmt = Number(billAmt) * (Number(elememt.value)/100);
     totalAmt = Number(billAmt) + Number(tipAmt);
+
+    console.log(tipAmt);
+    console.log(tipPerPerson);
+
+    for (var i=0;i<buttons.length;i++){
+        if (obj==buttons[i]){
+            continue
+        } else {
+            document.getElementById(buttons[i]).style.backgroundColor="hsl(183, 100%, 15%)";
+            document.getElementById(buttons[i]).style.color="white";
+        }
+    }
+
 
 }
